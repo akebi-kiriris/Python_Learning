@@ -1,0 +1,12 @@
+postman post  http://localhost:11434/api/chat
+raw json
+{
+    "model": "llama3:8b",
+    "messages": [
+        {
+            "role": "user",
+            "content": "介紹 LLM"
+        }
+    ],
+    "stream": false
+}

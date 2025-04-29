@@ -1,0 +1,64 @@
+1. print("...") 印出
+2. type(...) 型別 
+3. if .... :
+       elif ....
+4. a, b = 3, 4 一次宣告兩個值
+5. a = input("...") 輸入 畫面顯示...
+6. for i in range(數字):
+7. h,r = map(int,input().split(' '))
+8. split()=>自動處理空格 split(' ')=>只能處理一個空格
+9. print(f"{a / b:.3f}") 四捨五入到小數點後三位 1.667
+10.print(f"{f_minute:02}") 自動補0到兩位 7=>07
+11.from math import ceil ceil(3.14)會自動為4
+12.print(90, 80, 0, sep="\n") 換行輸出 sep為兩輸出值間的字串
+13.print(' '*space,end='') 字串可乘 end為輸出結尾
+14.可" "+" " 字串加字串
+15.字串.upper() 換為大寫
+16.''.join(ans) 輸出之間隔著''，join中只能包含字串、陣列，不能為數字
+17.x//n 整數除法，取整
+18.x%n 取餘數
+19.arr.append(i) 在arr末尾添加i
+20.arr.pop() 去掉arr末尾的值
+21.max(arr) 找arr裡的最大值 min則為最小值
+22.sorted(arr) 依小到大排序arr裡面的值
+
+
+items1 = list(range(1, 10)) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+items2 = list('hello')      # ['h', 'e', 'l', 'l', 'o']	
+items4 = ['hello'] * 3      # ['hello', 'hello', 'hello']
+del arr[0] 和 arr.pop(0) 都能刪除指定位置的值
+print(items.index('Python'))  # 查找元素的索引位置
+items.sort()  #依小到大排序items裡面的值.
+items.reverse() #反轉items裡面的值
+items3 = [x + y for x in 'ABC' for y in '12']   # ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+scores = [[0] * 3 for _ in range(5)]  # [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+
+*陣列 => 解包
+a = [1, 2, 3]
+b = [0, *a, 4, 5]
+print(b)  # [0, 1, 2, 3, 4, 5] 
+---
+def add(a, b, c):
+    print(a + b + c)
+
+arr = [1, 2, 3]
+add(*arr)    # 相當於 add(1, 2, 3)
+---
+arr = [1, 2, 3, 4]
+print(arr)     # [1, 2, 3, 4]   有中括號
+print(*arr)    # 1 2 3 4       沒有中括號，自動用空格分開
+---
+n = list(input()) 輸入234 產生["2","3","4"]
+temp= ''.join(sen + req) 可從sen、req兩個陣列中提出值給temp這個字串
+remove() 函数用于移除列表中某个值的第一个匹配项。
+pwd.lstrip("0") 去掉字串左側所有符合的值，000123變為123
+---
+arr = [list(input()) for i in range(2)] 輸入兩行COMETQ和HVNGAT arr為
+[['C', 'O', 'M', 'E', 'T', 'Q'], ['H', 'V', 'N', 'G', 'A', 'T']]
+
+arr = [list(map(str,input().split())) for i in range(2)]輸入兩行COMETQ和HVNGAT arr為
+[['COMETQ'], ['HVNGAT']] (若去掉.split()，結果與上面相同)
+
+
+
