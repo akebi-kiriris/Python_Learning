@@ -1,0 +1,151 @@
+# Python系统学习路线图
+
+## 一、当前阶段：基础巩固（1-2周）
+### 目标：掌握核心语法和常用数据结构
+```python
+# 当前已学示例
+my_tuple = (1, "apple")
+my_dict = {"name": "John", "age": 20}
+my_list = [i**2 for i in range(10)]
+
+二、核心进阶（2-3周）
+1. 文件与数据持久化
+学习目标：
+
+掌握不同文件格式的读写操作
+
+理解数据序列化原理
+
+关键主题：
+
+python
+# 文本文件操作
+with open('data.txt', 'w', encoding='utf-8') as f:
+    f.write("Hello\nWorld")
+
+# JSON处理
+import json
+data = {"score": [90, 85, 78]}
+json_str = json.dumps(data)
+2. 函数式编程
+学习目标：
+
+掌握高阶函数使用场景
+
+理解装饰器原理
+
+关键主题：
+
+python
+# lambda表达式
+squares = list(map(lambda x: x**2, [1,2,3]))
+
+# 装饰器示例
+def timer(func):
+    def wrapper(*args):
+        start = time.time()
+        result = func(*args)
+        print(f"Time used: {time.time()-start}")
+        return result
+    return wrapper
+三、实用技能（3-4周）
+1. 正则表达式
+学习目标：
+
+能处理文本匹配/提取需求
+
+理解常见正则模式
+
+关键语法：
+
+\d    数字
+\w    单词字符
+[]    字符集
+{m,n} 出现次数
+2. 数据处理
+学习目标：
+
+掌握Pandas基础操作
+
+能进行简单数据分析
+
+示例：
+
+python
+import pandas as pd
+df = pd.read_csv('sales.csv')
+print(df.groupby('product')['price'].mean())
+四、数据结构与算法（4-6周）
+1. 基础数据结构
+结构	Python实现	应用场景
+栈	list.append()/pop()	函数调用堆栈
+队列	collections.deque	消息队列
+哈希表	dict	快速查找
+2. 基础算法
+排序算法：冒泡/选择/插入排序
+
+查找算法：二分查找
+
+递归与分治
+
+五、实战项目路线
+初级项目（1周/个）
+文本分析工具
+
+功能：统计文件词频
+
+技术点：文件操作/Counter/正则
+
+自动整理工具
+
+功能：按扩展名分类文件
+
+技术点：os模块/pathlib
+
+中级项目（2周/个）
+数据可视化看板
+
+技术栈：matplotlib + pandas
+
+功能：销售数据图表展示
+
+网页爬虫
+
+技术栈：requests + BeautifulSoup
+
+功能：抓取天气数据
+
+六、学习策略
+每日学习建议
+晨间（30min）：学习新知识点
+
+午间（20min）：做对应练习题
+
+晚间（40min）：项目实践
+
+问题解决流程
+拆分问题到最小可执行单元
+
+写测试案例验证猜想
+
+使用print调试或调试器
+
+查阅官方文档
+
+七、资源推荐
+官方文档：Python Docs
+
+算法学习：LeetCode初级题库
+
+项目灵感：Python Awesome Projects
+
+备注：后续需要具体哪个部分的详细教程或代码示例，可以直接引用此文档的章节编号提问，例如："请展开第三章2节的数据处理示例"
+
+
+这个大纲的特点是：
+1. 明确的阶段划分和耗时预估
+2. 保留代码示例位置
+3. 结构化目录方便索引
+4. 包含学习策略建议
+
+需要展开哪个部分的详细内容（含完整代码示例和练习题目），请告知具体章节编号，我会为您补充完整的学习材料。
