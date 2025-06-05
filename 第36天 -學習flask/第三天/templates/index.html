@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ user.name }}'s Watchlist</title>
+    <img class="banner" src="{{ url_for('static', filename='/images/banner.jpg') }}">
+    <link rel="icon" href="{{ url_for('static', filename='/images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css' )}}" type="text/css">
+</head>
+<body>
+    <img alt="avatar" class="avatar" src="{{url_for('static',filename='/images/avatar.png')}}">
+    <h2>{{ user.name }}'s Watchlist</h2>
+
+    <p>{{ movies|length }} Titles</p>
+    <ul class="movie-list">
+        {% for movie in movies %} 
+        <li>{{ movie.title }} - {{ movie.year }}</li> 
+        {% endfor %}  
+    </ul>
+</body>
+</html>
